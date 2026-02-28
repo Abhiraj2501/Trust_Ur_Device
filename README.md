@@ -1,4 +1,4 @@
-# 🛡️ TrustUrDevice
+#  TrustUrDevice
 
 **Privacy-First, On-Device AI Cybersecurity Assistant**
 
