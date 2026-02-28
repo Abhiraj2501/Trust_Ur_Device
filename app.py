@@ -1,3 +1,4 @@
+'''app.py - Main Streamlit application for TrustUrDevice'''
 import streamlit as st
 import time, os
 from threat_analyzer import analyze_log_line
