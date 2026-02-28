@@ -1,3 +1,4 @@
+'''phishing_detector.py - Analyzes email content for phishing indicators'''
 # phishing_detector.py
 import re
 
