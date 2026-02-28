@@ -1,3 +1,4 @@
+'''log_monitor.py - Enhanced App Usage Monitor'''
 #!/usr/bin/env python3
 """
 Enhanced App Usage Monitor
