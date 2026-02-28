@@ -1,3 +1,4 @@
+'''main.py - Entry point for TrustUrDevice application'''
 import subprocess, sys, os, time, webbrowser
 
 os.makedirs("logs", exist_ok=True)
