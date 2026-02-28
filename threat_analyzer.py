@@ -1,3 +1,4 @@
+'''threat_analyzer.py - Analyzes log events and enriches them with AI insights'''
 from ai_agent import analyse_threat
 import os, json
 
