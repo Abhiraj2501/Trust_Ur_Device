@@ -1,3 +1,4 @@
+'''log_simulator.py - Simulates system events for testing'''
 import time, random, datetime, os, subprocess
 
 os.makedirs("logs", exist_ok=True)
