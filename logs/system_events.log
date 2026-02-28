@@ -1,0 +1,288 @@
+[2026-02-26 01:36:45] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-26 01:36:49] [LOW] [permission] Zoom.app accessed camera
+[2026-02-26 01:36:53] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-26 01:36:57] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-26 01:37:01] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-26 01:37:05] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-26 01:37:09] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-26 01:37:13] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-26 01:37:17] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-26 01:37:21] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-26 01:37:25] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-26 01:37:29] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-26 01:37:33] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-26 01:37:37] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-26 01:37:41] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-26 01:37:45] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-26 01:37:49] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-26 01:37:53] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-26 01:37:57] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-26 01:38:01] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-26 01:38:05] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-26 01:38:09] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-26 01:38:13] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-26 01:38:17] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-26 01:38:21] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-26 01:38:25] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-26 01:38:29] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-26 01:38:33] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-26 01:38:37] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-26 01:38:41] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-26 01:38:45] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 16:47:31] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 16:47:35] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 16:47:39] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 17:01:05] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 17:01:09] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 17:01:13] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 17:01:17] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 17:01:22] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 17:03:21] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 17:03:25] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 17:03:29] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:04:40] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:04:44] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:04:48] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:04:52] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:04:56] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:05:01] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:05:05] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:05:09] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:05:13] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:05:17] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:05:21] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:05:25] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:05:29] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:05:33] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:05:37] [LOW] [system] System update check from apple.com
+[2026-02-27 18:05:41] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:05:45] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:05:49] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:05:53] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:05:57] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:06:01] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:06:06] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:06:10] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:06:14] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:06:18] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:06:22] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:06:26] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:06:30] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:08:15] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:08:19] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:08:23] [LOW] [system] System update check from apple.com
+[2026-02-27 18:08:27] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:08:31] [LOW] [system] System update check from apple.com
+[2026-02-27 18:08:35] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:08:39] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:08:43] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:08:47] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:08:52] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:08:56] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:09:00] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:09:04] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:09:08] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:09:12] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:09:16] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:09:20] [LOW] [system] System update check from apple.com
+[2026-02-27 18:09:24] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:09:28] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:09:33] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:09:37] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:09:41] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:09:45] [LOW] [system] System update check from apple.com
+[2026-02-27 18:09:49] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:09:53] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:09:57] [LOW] [system] System update check from apple.com
+[2026-02-27 18:10:01] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:10:05] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:10:10] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:10:14] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:10:18] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:10:22] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:10:26] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:10:30] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:10:34] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:10:38] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:10:42] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:10:46] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:10:50] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:10:55] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:10:59] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:11:03] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:11:08] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:11:12] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:11:16] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:11:20] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:11:24] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:11:28] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:11:32] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:11:37] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:11:41] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:11:45] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:11:49] [LOW] [system] System update check from apple.com
+[2026-02-27 18:11:53] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:11:57] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:12:01] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:12:05] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:12:10] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:12:14] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:12:19] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:12:23] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:12:28] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:12:33] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:12:37] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:12:41] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:12:45] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:12:49] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:12:54] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:12:58] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:13:02] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:13:07] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:13:11] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:13:16] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:13:20] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:13:24] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:13:28] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:13:32] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:13:37] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:13:41] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:13:45] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:13:50] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:13:54] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:13:58] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:14:03] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:14:07] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:14:11] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:14:16] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:14:20] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:14:24] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:14:28] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:14:33] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:14:37] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:14:41] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:14:45] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:14:50] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:14:54] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:14:58] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:15:02] [LOW] [system] System update check from apple.com
+[2026-02-27 18:15:06] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:15:10] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:15:14] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:15:18] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:15:22] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:15:26] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:15:30] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:15:34] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:15:38] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:15:42] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:15:46] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:15:50] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:15:55] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:15:59] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:16:03] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:16:07] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:16:11] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:16:15] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:16:19] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:16:23] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:16:27] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:16:31] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:16:35] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:16:39] [LOW] [system] System update check from apple.com
+[2026-02-27 18:16:43] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:16:47] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:16:52] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:16:56] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:17:00] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:22:18] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:22:26] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:22:34] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:22:42] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:22:50] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:22:58] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:23:06] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:23:14] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:23:22] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:23:31] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:23:39] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:23:47] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:23:55] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:24:03] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:24:11] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:24:19] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:24:27] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 18:24:35] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:24:43] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:24:51] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:24:59] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:25:07] [LOW] [system] System update check from apple.com
+[2026-02-27 18:25:15] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:25:23] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:25:31] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:25:39] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:25:47] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:25:55] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:26:03] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:26:11] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:26:19] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:26:27] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:30:35] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:30:43] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:30:51] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:30:59] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:31:07] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:31:15] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:31:23] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:31:31] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:31:39] [LOW] [system] System update check from apple.com
+[2026-02-27 18:31:47] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:47:41] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:47:49] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:47:57] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:48:05] [LOW] [system] System update check from apple.com
+[2026-02-27 18:48:13] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:48:21] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:48:29] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:48:37] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:48:45] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:48:53] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:49:01] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:49:09] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:49:17] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:49:25] [LOW] [system] System update check from apple.com
+[2026-02-27 18:49:33] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:49:41] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:49:49] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:49:57] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:50:05] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:50:13] [LOW] [system] System update check from apple.com
+[2026-02-27 18:50:21] [HIGH] [scareware] Pop-up notification: 'Your Mac is infected! Click to clean'
+[2026-02-27 18:50:29] [LOW] [system] System update check from apple.com
+[2026-02-27 18:50:37] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 18:50:45] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 18:50:53] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:51:02] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:51:10] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 18:51:18] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:51:26] [HIGH] [privilege_escalation] Unknown process 'updater_x86' requested admin privileges
+[2026-02-27 18:51:34] [HIGH] [phishing] Incoming email from paypal-secure@paypal-update.net
+[2026-02-27 18:51:42] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 18:58:40] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:58:48] [HIGH] [malware] Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34
+[2026-02-27 18:58:56] [LOW] [system] System update check from apple.com
+[2026-02-27 18:59:04] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:59:12] [LOW] [system] System update check from apple.com
+[2026-02-27 18:59:20] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 18:59:29] [HIGH] [malware] Unknown binary executed from /tmp/install.sh
+[2026-02-27 18:59:37] [HIGH] [suspicious_file_access] Python script accessed /etc/hosts file
+[2026-02-27 18:59:45] [HIGH] [unauthorized_access] New login attempt: root@localhost via SSH
+[2026-02-27 18:59:53] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 19:00:01] [LOW] [browser] com.apple.Safari launched by user
+[2026-02-27 19:00:09] [MEDIUM] [permission] Spotify.app accessed microphone
+[2026-02-27 19:00:17] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 19:00:25] [HIGH] [c2_communication] DNS query to known malicious domain: track-metrics-cdn.ru
+[2026-02-27 19:00:33] [MEDIUM] [browser_hijack] Chrome extension installed: ID=unknown, source=third-party
+[2026-02-27 19:00:41] [LOW] [permission] Zoom.app accessed camera
+[2026-02-27 19:00:49] [LOW] [system] iCloud backup completed successfully
+[2026-02-27 19:00:57] [LOW] [system] iCloud backup completed successfully

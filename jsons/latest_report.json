@@ -1,0 +1,1046 @@
+{
+  "generated_at": "2026-02-28T23:08:14.910525",
+  "total_events": 1492,
+  "unique_apps": 81,
+  "apps_ranked": [
+    [
+      "Google",
+      255
+    ],
+    [
+      "Visual",
+      132
+    ],
+    [
+      "mdworker_shared",
+      131
+    ],
+    [
+      "com.apple.audio.SandboxHelper",
+      34
+    ],
+    [
+      "com.apple.geod",
+      24
+    ],
+    [
+      "IOUserBluetoothSerialDriver",
+      24
+    ],
+    [
+      "mdbulkimport",
+      24
+    ],
+    [
+      "com.apple.hiservices-xpcservice",
+      18
+    ],
+    [
+      "Software",
+      17
+    ],
+    [
+      "com.apple.accessibility.mediaaccessibilityd",
+      14
+    ],
+    [
+      "Python",
+      13
+    ],
+    [
+      "Finder",
+      12
+    ],
+    [
+      "Telegram",
+      12
+    ],
+    [
+      "com.apple.appkit.xpc.openAndSavePanelService",
+      12
+    ],
+    [
+      "com.apple.AppStoreDaemon.StorePrivilegedTaskService",
+      12
+    ],
+    [
+      "nbagent",
+      12
+    ],
+    [
+      "SoftwareUpdateNotificationManager",
+      12
+    ],
+    [
+      "com.apple.Safari.SafeBrowsing.Service",
+      12
+    ],
+    [
+      "AvatarPickerMemojiPicker",
+      12
+    ],
+    [
+      "com.apple.AddressBook.ABPersonViewService",
+      12
+    ],
+    [
+      "Family",
+      12
+    ],
+    [
+      "com.apple.CloudPhotosConfiguration",
+      12
+    ],
+    [
+      "WeatherWidget",
+      12
+    ],
+    [
+      "Screen",
+      12
+    ],
+    [
+      "ThumbnailExtension_macOS",
+      12
+    ],
+    [
+      "com.apple.AccountPolicyHelper",
+      12
+    ],
+    [
+      "OSDUIHelper",
+      12
+    ],
+    [
+      "com.apple.quicklook.ThumbnailsAgent",
+      12
+    ],
+    [
+      "CoreServicesUIAgent",
+      12
+    ],
+    [
+      "CoreLocationAgent",
+      12
+    ],
+    [
+      "SiriNCService",
+      12
+    ],
+    [
+      "Siri",
+      12
+    ],
+    [
+      "Keychain",
+      12
+    ],
+    [
+      "DockHelper",
+      12
+    ],
+    [
+      "com.apple.CodeSigningHelper",
+      12
+    ],
+    [
+      "com.apple.CoreSimulator.CoreSimulatorService",
+      12
+    ],
+    [
+      "AccessibilityVisualsAgent",
+      12
+    ],
+    [
+      "UIKitSystem",
+      12
+    ],
+    [
+      "Setup",
+      12
+    ],
+    [
+      "universalAccessAuthWarn",
+      12
+    ],
+    [
+      "IMAutomaticHistoryDeletionAgent",
+      12
+    ],
+    [
+      "mdsync",
+      12
+    ],
+    [
+      "PowerChime",
+      12
+    ],
+    [
+      "Feedback",
+      12
+    ],
+    [
+      "UniversalControl",
+      12
+    ],
+    [
+      "Input",
+      12
+    ],
+    [
+      "com.apple.CloudDocs.iCloudDriveFileProvider",
+      12
+    ],
+    [
+      "AXVisualSupportAgent",
+      12
+    ],
+    [
+      "Spotlight",
+      12
+    ],
+    [
+      "com.apphousekitchen.aldente-pro.helper",
+      12
+    ],
+    [
+      "AlDente",
+      12
+    ],
+    [
+      "imagent",
+      12
+    ],
+    [
+      "AirPlayUIAgent",
+      12
+    ],
+    [
+      "TextInputMenuAgent",
+      12
+    ],
+    [
+      "WiFiAgent",
+      12
+    ],
+    [
+      "com.apple.dock.extra",
+      12
+    ],
+    [
+      "NotificationCenter",
+      12
+    ],
+    [
+      "identityservicesd",
+      12
+    ],
+    [
+      "WallpaperImageExtension",
+      12
+    ],
+    [
+      "WallpaperAgent",
+      12
+    ],
+    [
+      "SystemUIServer",
+      12
+    ],
+    [
+      "ControlCenter",
+      12
+    ],
+    [
+      "Dock",
+      12
+    ],
+    [
+      "WindowManager",
+      12
+    ],
+    [
+      "com.apple.AppleUserHIDDrivers",
+      12
+    ],
+    [
+      "com.apple.DriverKit-IOUserDockChannelSerial",
+      12
+    ],
+    [
+      "loginwindow",
+      12
+    ],
+    [
+      "com.apple.cmio.registerassistantservice",
+      12
+    ],
+    [
+      "sociallayerd",
+      10
+    ],
+    [
+      "com.apple.SiriTTSService.TrialProxy",
+      9
+    ],
+    [
+      "CalendarWidgetExtension",
+      9
+    ],
+    [
+      "WhatsApp",
+      8
+    ],
+    [
+      "com.apple.NRD.UpdateBrainService",
+      7
+    ],
+    [
+      "WAAppKitBridgeService",
+      7
+    ],
+    [
+      "com.apple.StreamingUnzipService.privileged",
+      6
+    ],
+    [
+      "com.apple.iCloudHelper",
+      6
+    ],
+    [
+      "com.apple.MobileSoftwareUpdate.CleanupPreparePathService",
+      5
+    ],
+    [
+      "com.apple.siri.embeddedspeech",
+      5
+    ],
+    [
+      "ContactsIntentExtension",
+      4
+    ],
+    [
+      "PhoneIntentHandler",
+      4
+    ],
+    [
+      "SiriAUSP",
+      4
+    ]
+  ],
+  "app_details": {
+    "Google": {
+      "count": 255,
+      "total_cpu": 241.9999999999999,
+      "total_memory": 257.5999999999999,
+      "pids": [
+        "32341",
+        "30779",
+        "30758",
+        "30816",
+        "32106",
+        "30805",
+        "30785",
+        "32107",
+        "30810",
+        "30756",
+        "30781",
+        "32337",
+        "30763",
+        "32340",
+        "32339",
+        "30788",
+        "30762",
+        "31469",
+        "32338",
+        "30784",
+        "30815",
+        "30777",
+        "30764",
+        "30807"
+      ]
+    },
+    "Visual": {
+      "count": 132,
+      "total_cpu": 305.30000000000007,
+      "total_memory": 152.79999999999993,
+      "pids": [
+        "29330",
+        "29325",
+        "31361",
+        "30988",
+        "31709",
+        "31674",
+        "29328",
+        "31362",
+        "29441",
+        "29327",
+        "29329"
+      ]
+    },
+    "Python": {
+      "count": 13,
+      "total_cpu": 14.100000000000001,
+      "total_memory": 1.6000000000000005,
+      "pids": [
+        "32297",
+        "32311"
+      ]
+    },
+    "Finder": {
+      "count": 12,
+      "total_cpu": 7.3999999999999995,
+      "total_memory": 6.500000000000002,
+      "pids": [
+        "591"
+      ]
+    },
+    "Telegram": {
+      "count": 12,
+      "total_cpu": 60.3,
+      "total_memory": 15.399999999999999,
+      "pids": [
+        "31335"
+      ]
+    },
+    "com.apple.audio.SandboxHelper": {
+      "count": 34,
+      "total_cpu": 0.0,
+      "total_memory": 2.0000000000000004,
+      "pids": [
+        "32371",
+        "32373",
+        "31338",
+        "32090"
+      ]
+    },
+    "com.apple.appkit.xpc.openAndSavePanelService": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 4.8,
+      "pids": [
+        "30922"
+      ]
+    },
+    "com.apple.AppStoreDaemon.StorePrivilegedTaskService": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "30902"
+      ]
+    },
+    "sociallayerd": {
+      "count": 10,
+      "total_cpu": 0.0,
+      "total_memory": 0.9999999999999999,
+      "pids": [
+        "30880"
+      ]
+    },
+    "com.apple.SiriTTSService.TrialProxy": {
+      "count": 9,
+      "total_cpu": 0.0,
+      "total_memory": 0.8999999999999999,
+      "pids": [
+        "30812"
+      ]
+    },
+    "nbagent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.4,
+      "pids": [
+        "30739"
+      ]
+    },
+    "com.apple.accessibility.mediaaccessibilityd": {
+      "count": 14,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "30725",
+        "30720"
+      ]
+    },
+    "SoftwareUpdateNotificationManager": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.4,
+      "pids": [
+        "30722"
+      ]
+    },
+    "com.apple.hiservices-xpcservice": {
+      "count": 18,
+      "total_cpu": 0.4,
+      "total_memory": 0.7,
+      "pids": [
+        "20066",
+        "30717"
+      ]
+    },
+    "com.apple.StreamingUnzipService.privileged": {
+      "count": 6,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "30713"
+      ]
+    },
+    "com.apple.NRD.UpdateBrainService": {
+      "count": 7,
+      "total_cpu": 0.0,
+      "total_memory": 0.7,
+      "pids": [
+        "30708"
+      ]
+    },
+    "com.apple.MobileSoftwareUpdate.CleanupPreparePathService": {
+      "count": 5,
+      "total_cpu": 0.0,
+      "total_memory": 0.5,
+      "pids": [
+        "30700"
+      ]
+    },
+    "Software": {
+      "count": 17,
+      "total_cpu": 0.0,
+      "total_memory": 2.500000000000001,
+      "pids": [
+        "30698",
+        "30697"
+      ]
+    },
+    "com.apple.Safari.SafeBrowsing.Service": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "30696"
+      ]
+    },
+    "AvatarPickerMemojiPicker": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 3.599999999999999,
+      "pids": [
+        "30628"
+      ]
+    },
+    "com.apple.AddressBook.ABPersonViewService": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 3.599999999999999,
+      "pids": [
+        "30624"
+      ]
+    },
+    "ContactsIntentExtension": {
+      "count": 4,
+      "total_cpu": 0.0,
+      "total_memory": 0.8,
+      "pids": [
+        "30618"
+      ]
+    },
+    "PhoneIntentHandler": {
+      "count": 4,
+      "total_cpu": 0.0,
+      "total_memory": 0.4,
+      "pids": [
+        "30613"
+      ]
+    },
+    "SiriAUSP": {
+      "count": 4,
+      "total_cpu": 0.0,
+      "total_memory": 0.4,
+      "pids": [
+        "30607"
+      ]
+    },
+    "com.apple.siri.embeddedspeech": {
+      "count": 5,
+      "total_cpu": 0.0,
+      "total_memory": 0.5,
+      "pids": [
+        "30602"
+      ]
+    },
+    "CalendarWidgetExtension": {
+      "count": 9,
+      "total_cpu": 0.0,
+      "total_memory": 1.7999999999999998,
+      "pids": [
+        "30453"
+      ]
+    },
+    "Family": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.4,
+      "pids": [
+        "30446"
+      ]
+    },
+    "com.apple.CloudPhotosConfiguration": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "30429"
+      ]
+    },
+    "WeatherWidget": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 3.599999999999999,
+      "pids": [
+        "30281"
+      ]
+    },
+    "Screen": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.8000000000000003,
+      "pids": [
+        "30280"
+      ]
+    },
+    "ThumbnailExtension_macOS": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.5,
+      "pids": [
+        "30275"
+      ]
+    },
+    "com.apple.AccountPolicyHelper": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "30250"
+      ]
+    },
+    "OSDUIHelper": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.4,
+      "pids": [
+        "30162"
+      ]
+    },
+    "com.apple.quicklook.ThumbnailsAgent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.5,
+      "pids": [
+        "30110"
+      ]
+    },
+    "CoreServicesUIAgent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.4,
+      "pids": [
+        "29775"
+      ]
+    },
+    "CoreLocationAgent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.4,
+      "pids": [
+        "29744"
+      ]
+    },
+    "com.apple.geod": {
+      "count": 24,
+      "total_cpu": 0.0,
+      "total_memory": 2.400000000000001,
+      "pids": [
+        "29722",
+        "29702"
+      ]
+    },
+    "SiriNCService": {
+      "count": 12,
+      "total_cpu": 0.2,
+      "total_memory": 3.9999999999999987,
+      "pids": [
+        "29665"
+      ]
+    },
+    "Siri": {
+      "count": 12,
+      "total_cpu": 0.7000000000000001,
+      "total_memory": 2.4,
+      "pids": [
+        "29629"
+      ]
+    },
+    "Keychain": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.1999999999999997,
+      "pids": [
+        "29616"
+      ]
+    },
+    "DockHelper": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.1999999999999997,
+      "pids": [
+        "29321"
+      ]
+    },
+    "com.apple.CodeSigningHelper": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "28934"
+      ]
+    },
+    "com.apple.CoreSimulator.CoreSimulatorService": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "20772"
+      ]
+    },
+    "AccessibilityVisualsAgent": {
+      "count": 12,
+      "total_cpu": 1.3,
+      "total_memory": 2.4,
+      "pids": [
+        "20708"
+      ]
+    },
+    "UIKitSystem": {
+      "count": 12,
+      "total_cpu": 0.1,
+      "total_memory": 2.6999999999999997,
+      "pids": [
+        "20050"
+      ]
+    },
+    "Setup": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "2531"
+      ]
+    },
+    "universalAccessAuthWarn": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "1884"
+      ]
+    },
+    "IMAutomaticHistoryDeletionAgent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "1648"
+      ]
+    },
+    "mdsync": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "1602"
+      ]
+    },
+    "PowerChime": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "1506"
+      ]
+    },
+    "Feedback": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "1224"
+      ]
+    },
+    "UniversalControl": {
+      "count": 12,
+      "total_cpu": 6.0,
+      "total_memory": 1.7,
+      "pids": [
+        "934"
+      ]
+    },
+    "IOUserBluetoothSerialDriver": {
+      "count": 24,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "928",
+        "929"
+      ]
+    },
+    "mdbulkimport": {
+      "count": 24,
+      "total_cpu": 0.0,
+      "total_memory": 2.400000000000001,
+      "pids": [
+        "879",
+        "880"
+      ]
+    },
+    "Input": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "796"
+      ]
+    },
+    "com.apple.CloudDocs.iCloudDriveFileProvider": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "778"
+      ]
+    },
+    "AXVisualSupportAgent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "774"
+      ]
+    },
+    "Spotlight": {
+      "count": 12,
+      "total_cpu": 2.0,
+      "total_memory": 2.6000000000000005,
+      "pids": [
+        "741"
+      ]
+    },
+    "com.apphousekitchen.aldente-pro.helper": {
+      "count": 12,
+      "total_cpu": 1.2000000000000002,
+      "total_memory": 1.0999999999999999,
+      "pids": [
+        "726"
+      ]
+    },
+    "AlDente": {
+      "count": 12,
+      "total_cpu": 2.8999999999999995,
+      "total_memory": 2.4,
+      "pids": [
+        "704"
+      ]
+    },
+    "imagent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "693"
+      ]
+    },
+    "AirPlayUIAgent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "692"
+      ]
+    },
+    "TextInputMenuAgent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "698"
+      ]
+    },
+    "WiFiAgent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "668"
+      ]
+    },
+    "com.apple.dock.extra": {
+      "count": 12,
+      "total_cpu": 0.8,
+      "total_memory": 1.3,
+      "pids": [
+        "666"
+      ]
+    },
+    "NotificationCenter": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.4,
+      "pids": [
+        "635"
+      ]
+    },
+    "identityservicesd": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 2.2,
+      "pids": [
+        "632"
+      ]
+    },
+    "WallpaperImageExtension": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "626"
+      ]
+    },
+    "WallpaperAgent": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "604"
+      ]
+    },
+    "SystemUIServer": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 1.2,
+      "pids": [
+        "590"
+      ]
+    },
+    "ControlCenter": {
+      "count": 12,
+      "total_cpu": 1.6,
+      "total_memory": 4.2,
+      "pids": [
+        "587"
+      ]
+    },
+    "Dock": {
+      "count": 12,
+      "total_cpu": 4.0,
+      "total_memory": 2.999999999999999,
+      "pids": [
+        "586"
+      ]
+    },
+    "WindowManager": {
+      "count": 12,
+      "total_cpu": 5.9,
+      "total_memory": 2.4,
+      "pids": [
+        "584"
+      ]
+    },
+    "com.apple.AppleUserHIDDrivers": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "575"
+      ]
+    },
+    "com.apple.DriverKit-IOUserDockChannelSerial": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 0.0,
+      "pids": [
+        "572"
+      ]
+    },
+    "loginwindow": {
+      "count": 12,
+      "total_cpu": 0.4,
+      "total_memory": 2.9999999999999996,
+      "pids": [
+        "371"
+      ]
+    },
+    "com.apple.cmio.registerassistantservice": {
+      "count": 12,
+      "total_cpu": 0.0,
+      "total_memory": 0.1,
+      "pids": [
+        "366"
+      ]
+    },
+    "mdworker_shared": {
+      "count": 131,
+      "total_cpu": 4.499999999999999,
+      "total_memory": 25.89999999999998,
+      "pids": [
+        "32101",
+        "32104",
+        "32361",
+        "32099",
+        "32388",
+        "32355",
+        "32364",
+        "32351",
+        "32354",
+        "32359",
+        "32360",
+        "32352",
+        "32370",
+        "32347",
+        "32353",
+        "32358",
+        "32387",
+        "32382",
+        "32108",
+        "32356",
+        "32372",
+        "32348",
+        "32386"
+      ]
+    },
+    "WhatsApp": {
+      "count": 8,
+      "total_cpu": 118.7,
+      "total_memory": 25.2,
+      "pids": [
+        "32342"
+      ]
+    },
+    "WAAppKitBridgeService": {
+      "count": 7,
+      "total_cpu": 0.0,
+      "total_memory": 0.7999999999999999,
+      "pids": [
+        "32363"
+      ]
+    },
+    "com.apple.iCloudHelper": {
+      "count": 6,
+      "total_cpu": 0.0,
+      "total_memory": 0.6,
+      "pids": [
+        "32369"
+      ]
+    }
+  }
+}
