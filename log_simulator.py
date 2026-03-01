@@ -1,5 +1,4 @@
-'''log_simulator.py - Simulates system events for testing'''
-import time, random, datetime, os, subprocess
+import subprocess, time, datetime, os, json
 
 os.makedirs("logs", exist_ok=True)
 
@@ -9,46 +8,104 @@ def send_mac_notification(title, message):
 
 send_mac_notification(
     "🛡️ TrustUrDevice",
-    "Monitoring active — system protection is running"
+    "Real-time monitoring active — watching your system"
 )
 
-EVENTS = [
-    ("com.apple.Safari launched by user", "LOW", "browser"),
-    ("Spotify.app accessed microphone", "MEDIUM", "permission"),
-    ("Unknown process 'updater_x86' requested admin privileges", "HIGH", "privilege_escalation"),
-    ("Incoming email from paypal-secure@paypal-update.net", "HIGH", "phishing"),
-    ("Installation package 'AdobeFlash.dmg' downloaded from 185.220.101.34", "HIGH", "malware"),
-    ("Chrome extension installed: ID=unknown, source=third-party", "MEDIUM", "browser_hijack"),
-    ("System update check from apple.com", "LOW", "system"),
-    ("Python script accessed /etc/hosts file", "HIGH", "suspicious_file_access"),
-    ("Pop-up notification: 'Your Mac is infected! Click to clean'", "HIGH", "scareware"),
-    ("Zoom.app accessed camera", "LOW", "permission"),
-    ("Unknown binary executed from /tmp/install.sh", "HIGH", "malware"),
-    ("DNS query to known malicious domain: track-metrics-cdn.ru", "HIGH", "c2_communication"),
-    ("iCloud backup completed successfully", "LOW", "system"),
-    ("New login attempt: root@localhost via SSH", "HIGH", "unauthorized_access"),
+WHITELIST = [
+    "com.apple.tiswitcher",
+    "com.apple.cloudd",
+    "CloudKitDaemon",
+    "com.apple.icloud",
+    "com.apple.windowserver",
+    "com.apple.coreaudio",
+    "com.apple.bluetooth",
+    "com.apple.AppleLOM",
+    "WirelessProximity",
+    "bluetoothd",
 ]
 
-print("🟢 Log simulator running... generating events every 4 seconds")
+def is_whitelisted(line):
+    return any(w.lower() in line.lower() for w in WHITELIST)
+
+def fetch_real_logs():
+    try:
+        result = subprocess.run([
+            "log", "show",
+            "--last", "1m",
+            "--style", "syslog",
+            "--predicate",
+            'eventMessage CONTAINS "denied" OR '
+            'eventMessage CONTAINS "failed" OR '
+            'eventMessage CONTAINS "unauthorized" OR '
+            'eventMessage CONTAINS "malicious" OR '
+            'eventMessage CONTAINS "blocked" OR '
+            'eventMessage CONTAINS "suspicious" OR '
+            'eventMessage CONTAINS "permission" OR '
+            'eventMessage CONTAINS "sandbox" OR '
+            'eventMessage CONTAINS "error" OR '
+            'eventMessage CONTAINS "exploit" OR '
+            'eventMessage CONTAINS "injection"'
+        ], capture_output=True, text=True, timeout=15)
+
+        lines = result.stdout.strip().split("\n")
+        return [l for l in lines if l.strip() and not l.startswith("Filtering")]
+    except Exception as e:
+        print(f"Log fetch error: {e}")
+        return []
 
 last_notification_time = 0
+seen_lines = set()
+
+print("🟢 TrustUrDevice — Real log monitoring started")
+print("📡 Pulling live macOS system events every 30 seconds...\n")
 
 while True:
-    event, level, category = random.choice(EVENTS)
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    line = f"[{timestamp}] [{level}] [{category}] {event}\n"
+    print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] Fetching real system logs...")
 
-    with open("logs/system_events.log", "a") as f:
-        f.write(line)
+    real_logs = fetch_real_logs()
+    new_lines = [l for l in real_logs if l not in seen_lines]
 
-    # Only notify once every 30 seconds
-    current_time = time.time()
-    if level == "HIGH" and (current_time - last_notification_time) > 30:
-        send_mac_notification(
-            "⚠️ TrustUrDevice — Threat Detected",
-            event
-        )
-        last_notification_time = current_time
+    if new_lines:
+        print(f"  → {len(new_lines)} new events found")
 
-    print(f"  → logged: {line.strip()}")
-    time.sleep(8)
+        for line in new_lines[-10:]:
+            if is_whitelisted(line):
+                print(f"  → [SAFE] Whitelisted, skipping")
+                seen_lines.add(line)
+                continue
+
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            line_lower = line.lower()
+
+            if any(w in line_lower for w in ["denied", "unauthorized", "exploit", "injection", "malicious"]):
+                level = "HIGH"
+            elif any(w in line_lower for w in ["failed", "blocked", "sandbox", "permission", "error"]):
+                level = "MEDIUM"
+            else:
+                level = "LOW"
+
+            log_entry = {
+                "timestamp": timestamp,
+                "level": level,
+                "category": "system",
+                "event": line.strip(),
+                "source": "macos_system_log"
+            }
+
+            with open("logs/system_events.json", "a") as f:
+                f.write(json.dumps(log_entry) + "\n")
+
+            print(f"  → [{level}] {line[:80]}...")
+            seen_lines.add(line)
+
+            current_time = time.time()
+            if level == "HIGH" and (current_time - last_notification_time) > 30:
+                send_mac_notification(
+                    "⚠️ TrustUrDevice — Threat Detected",
+                    line[:100]
+                )
+                last_notification_time = current_time
+    else:
+        print("  → No new suspicious events. System looks clean.")
+
+    time.sleep(30)
