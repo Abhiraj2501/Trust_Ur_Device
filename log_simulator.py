@@ -12,6 +12,10 @@ send_mac_notification(
 )
 
 WHITELIST = [
+    "imagent",
+    "com.apple.contacts",
+    "com.apple.coredata",
+    "NSCocoaErrorDomain",
     "com.apple.tiswitcher",
     "com.apple.cloudd",
     "CloudKitDaemon",

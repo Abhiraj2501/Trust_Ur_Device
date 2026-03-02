@@ -2,8 +2,9 @@ import ollama
 
 def analyse_threat(log_line):
     prompt = f"""
-You are a cybersecurity AI assistant running locally on a user's machine.
-A system event was just detected.
+You are a cybersecurity AI assistant on macOS.
+Known safe Apple system processes should be rated LOW.
+Only flag HIGH if there is clear evidence of malicious intent.
 
 Event: {log_line}
 

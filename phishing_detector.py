@@ -1,24 +1,44 @@
-'''phishing_detector.py - Analyzes email content for phishing indicators'''
-# phishing_detector.py
-import re
+import pickle
+import os
 
-PHISHING_SIGNALS = {
-    "urgent_language": ["verify immediately", "account suspended", "click now", "urgent action", "limited time"],
-    "credential_theft": ["confirm your password", "update your details", "enter your credentials", "bank account"],
-    "suspicious_sender": ["noreply@", "no-reply@", "support@secure", "paypal-security", "amazon-update"],
-    "suspicious_links": ["bit.ly", "tinyurl", "t.co", "click here", "login now", "verify here"]
-}
+# Load trained model and vectorizer
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "model/phishing_model.pkl")
+VECTORIZER_PATH = os.path.join(os.path.dirname(__file__), "model/vectorizer.pkl")
+
+model = pickle.load(open(MODEL_PATH, "rb"))
+vectorizer = pickle.load(open(VECTORIZER_PATH, "rb"))
 
 def analyze_email(subject, body, sender):
+    # Combine all email parts into one string
+    full_text = f"{sender} {subject} {body}"
+    
+    # Transform using trained vectorizer
+    vec = vectorizer.transform([full_text])
+    
+    # Predict
+    prediction = model.predict(vec)[0]
+    probability = model.predict_proba(vec)[0]
+    confidence = max(probability) * 100
+    score = int(prediction)
+    
+    # Map to risk level
+    if prediction == 1 and confidence > 80:
+        risk = "HIGH"
+    elif prediction == 1 and confidence > 60:
+        risk = "MEDIUM"
+    else:
+        risk = "LOW"
+    
+    # Build flags for explainability
     flags = []
-    score = 0
-    text = f"{subject} {body} {sender}".lower()
-
-    for category, patterns in PHISHING_SIGNALS.items():
-        for pattern in patterns:
-            if pattern in text:
-                flags.append((category, pattern))
-                score += 1
-
-    risk = "LOW" if score == 0 else "MEDIUM" if score <= 2 else "HIGH"
+    if prediction == 1:
+        # Find which words triggered the model
+        feature_names = vectorizer.get_feature_names_out()
+        vec_array = vec.toarray()[0]
+        top_indices = vec_array.argsort()[-5:][::-1]
+        top_words = [feature_names[i] for i in top_indices if vec_array[i] > 0]
+        
+        for word in top_words:
+            flags.append(("ml_detection", word))
+    
     return risk, flags, score
