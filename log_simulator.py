@@ -12,20 +12,19 @@ send_mac_notification(
 )
 
 WHITELIST = [
-    "imagent",
-    "com.apple.contacts",
-    "com.apple.coredata",
-    "NSCocoaErrorDomain",
-    "com.apple.tiswitcher",
-    "com.apple.cloudd",
-    "CloudKitDaemon",
-    "com.apple.icloud",
-    "com.apple.windowserver",
-    "com.apple.coreaudio",
-    "com.apple.bluetooth",
-    "com.apple.AppleLOM",
-    "WirelessProximity",
-    "bluetoothd",
+    "imagent", "com.apple.contacts", "com.apple.coredata",
+    "NSCocoaErrorDomain", "com.apple.tiswitcher", "com.apple.cloudd",
+    "CloudKitDaemon", "com.apple.icloud", "com.apple.windowserver",
+    "com.apple.coreaudio", "com.apple.bluetooth", "com.apple.AppleLOM",
+    "WirelessProximity", "bluetoothd", "runningboardd", "memorystatus",
+    "com.apple.libxpc", "OSLaunchd", "com.apple.runningboard",
+    "NSPOSIXErrorDomain", "com.apple.xpc", "springboard",
+    "com.apple.cfnetwork", "symptom", "networkd", "trustd",
+    "com.apple.security", "sharingd", "com.apple.safari",
+    "com.apple.webkit", "com.apple.appkit", "com.apple.foundation",
+    "chronod", "dasd", "mds", "mdworker", "com.apple.spotlight",
+    "coreauthd", "com.apple.authkit", "com.apple.systempreferences",
+    "com.apple.dock", "com.apple.finder", "com.apple.mail",
 ]
 
 def is_whitelisted(line):
@@ -81,9 +80,9 @@ while True:
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             line_lower = line.lower()
 
-            if any(w in line_lower for w in ["denied", "unauthorized", "exploit", "injection", "malicious"]):
+            if any(w in line_lower for w in ["denied", "unauthorized", "exploit", "injection", "malicious", "rootkit", "backdoor"]):
                 level = "HIGH"
-            elif any(w in line_lower for w in ["failed", "blocked", "sandbox", "permission", "error"]):
+            elif any(w in line_lower for w in ["failed", "blocked", "sandbox violation", "permission denied"]):
                 level = "MEDIUM"
             else:
                 level = "LOW"
