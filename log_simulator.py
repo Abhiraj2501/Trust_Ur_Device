@@ -87,7 +87,7 @@ while True:
 
             if any(w in line_lower for w in ["denied", "unauthorized", "exploit", "injection", "malicious", "rootkit", "backdoor"]):
                 level = "HIGH"
-            elif any(w in line_lower for w in ["failed", "blocked", "sandbox violation", "permission denied"]):
+            elif any(w in line_lower for w in ["permission denied", "sandbox violation", "access denied"]):
                 level = "MEDIUM"
             else:
                 level = "LOW"
