@@ -1,21 +1,18 @@
-'''threat_analyzer.py - Analyzes log events and enriches them with AI insights'''
-from ai_agent import analyse_threat
+'''threat_analyzer.py - Now powered by RAG pipeline'''
+from rag_agent import analyse_with_rag
 import os, json
 
 AI_LOG_PATH = "logs/ai_events.jsonl"
-
 
 def persist_ai_event(result):
     os.makedirs("logs", exist_ok=True)
     with open(AI_LOG_PATH, "a") as f:
         f.write(json.dumps(result) + "\n")
 
-
 def analyze_log_line(line):
     if not line.strip():
         return None
 
-    # ---- robust parser ----
     try:
         sections = line.split("]")
         timestamp = sections[0].replace("[", "").strip()
@@ -28,59 +25,49 @@ def analyze_log_line(line):
         category = "unknown"
         event_text = line.strip()
 
-    # ---- skip AI for LOW events (prevent hallucination) ----
+    # Skip AI for LOW — saves time, prevents hallucination
     if level == "LOW":
-        enriched = {
-            "timestamp": timestamp,
-            "level": "LOW",
-            "category": category,
-            "event": event_text,
-            "reason": "Normal system activity.",
-            "action": "No action required.",
-            "hygiene_tip": "Keep your system updated."
-        }
-
-        persist_ai_event(enriched)
-
         return {
             "timestamp": timestamp,
             "level": "LOW",
             "category": category,
             "event": event_text,
             "profile": {
-                "title": f"{category.replace('_', ' ').title()} Detected",
-                "explanation": enriched["reason"],
-                "action": enriched["action"],
-                "hygiene_tip": enriched["hygiene_tip"]
+                "title": "Normal Activity",
+                "explanation": "Normal system activity detected.",
+                "action": "No action required.",
+                "hygiene_tip": "Keep your system updated."
             }
         }
 
-    # ---- AI analysis for MEDIUM / HIGH ----
-    ai_result = analyse_threat(event_text)
+    # RAG pipeline for MEDIUM / HIGH
+    rag_result = analyse_with_rag(event_text)
 
     enriched = {
         "timestamp": timestamp,
-        "level": ai_result["threat_level"],
-        "category": category,
+        "level": rag_result["threat_level"],
+        "category": rag_result.get("category", category),
         "event": event_text,
-        "reason": ai_result["reason"],
-        "action": ai_result["action"],
-        "hygiene_tip": ai_result["hygiene_tip"]
+        "reason": rag_result["reason"],
+        "action": rag_result["action"],
+        "hygiene_tip": rag_result["hygiene_tip"],
+        "rag_used": rag_result.get("rag_context_used", False),
+        "rag_matches": rag_result.get("rag_matches", [])
     }
 
     persist_ai_event(enriched)
 
-    # ---- alert trigger ----
     if enriched["level"] == "HIGH":
-        print(f"[ALERT] {enriched['event']} → {enriched['action']}")
+        print(f"[HIGH ALERT] {enriched['event'][:80]}")
+        print(f"  → {enriched['action']}")
 
     return {
         "timestamp": timestamp,
         "level": enriched["level"],
-        "category": category,
+        "category": enriched["category"],
         "event": event_text,
         "profile": {
-            "title": f"{category.replace('_', ' ').title()} Detected",
+            "title": f"{enriched['category'].replace('_', ' ').title()} Detected",
             "explanation": enriched["reason"],
             "action": enriched["action"],
             "hygiene_tip": enriched["hygiene_tip"]

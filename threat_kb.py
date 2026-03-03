@@ -1,0 +1,75 @@
+'''threat_kb.py - FAISS-based threat knowledge base'''
+import numpy as np
+import json, os
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+THREAT_PATTERNS = [
+    {"id": "t001", "text": "Process requested admin privileges or sudo access unexpectedly", "category": "privilege_escalation", "severity": "HIGH", "action": "Deny the request. Identify the process and terminate if unknown.", "hygiene": "Never grant admin privileges to unknown processes."},
+    {"id": "t002", "text": "Unknown binary executed from /tmp or /var/tmp directory", "category": "malware_execution", "severity": "HIGH", "action": "Terminate the process immediately and delete the binary.", "hygiene": "Executables should never run from temp directories."},
+    {"id": "t003", "text": "Script executed from downloads folder or user temp directory", "category": "malware_execution", "severity": "HIGH", "action": "Stop execution and scan the file with a trusted tool.", "hygiene": "Never run scripts downloaded from the internet without verification."},
+    {"id": "t004", "text": "DNS query to known malicious domain or suspicious TLD like .ru .cn .tk", "category": "c2_communication", "severity": "HIGH", "action": "Block the connection and identify which process made the request.", "hygiene": "Use a DNS filter like NextDNS to block malicious domains automatically."},
+    {"id": "t005", "text": "Outbound connection to IP address on known threat blacklist", "category": "c2_communication", "severity": "HIGH", "action": "Block the connection immediately and audit running processes.", "hygiene": "Enable firewall and monitor outbound connections regularly."},
+    {"id": "t006", "text": "Unusual outbound traffic on non-standard port at night or off-hours", "category": "data_exfiltration", "severity": "HIGH", "action": "Block and investigate. Could be data exfiltration.", "hygiene": "Set up network monitoring alerts for unusual traffic patterns."},
+    {"id": "t007", "text": "Process accessed /etc/hosts /etc/passwd /etc/sudoers system files", "category": "system_file_access", "severity": "HIGH", "action": "Check which process accessed the file and why. Terminate if unknown.", "hygiene": "System files should only be accessed by trusted system processes."},
+    {"id": "t008", "text": "Mass file modification or encryption detected across multiple directories", "category": "ransomware", "severity": "HIGH", "action": "Immediately disconnect from network and shut down. Possible ransomware.", "hygiene": "Keep offline backups. Ransomware cannot encrypt what it cannot reach."},
+    {"id": "t009", "text": "Application accessed keychain or password storage without user prompt", "category": "credential_theft", "severity": "HIGH", "action": "Revoke app keychain access in System Settings immediately.", "hygiene": "Audit keychain access permissions for all installed apps regularly."},
+    {"id": "t010", "text": "Browser visited domain that mimics legitimate service like paypal-secure or amazon-login", "category": "phishing", "severity": "HIGH", "action": "Close the tab immediately. Do not enter any credentials.", "hygiene": "Always check the exact domain in the address bar before logging in."},
+    {"id": "t011", "text": "Pop-up claiming virus infection asking to call a number or download tool", "category": "scareware", "severity": "HIGH", "action": "Close immediately. Do not call any number or download anything.", "hygiene": "Legitimate security software never asks you to call a phone number."},
+    {"id": "t012", "text": "Application accessed microphone or camera without user interaction", "category": "privacy_violation", "severity": "MEDIUM", "action": "Check which app triggered this in System Settings > Privacy.", "hygiene": "Regularly audit microphone and camera permissions for all apps."},
+    {"id": "t013", "text": "New browser extension installed from unknown or third party source", "category": "browser_hijack", "severity": "MEDIUM", "action": "Review and remove the extension immediately if unrecognised.", "hygiene": "Only install browser extensions from official stores with high ratings."},
+    {"id": "t014", "text": "Application attempting to modify system startup items or launch agents", "category": "persistence", "severity": "HIGH", "action": "Block and remove the launch agent from ~/Library/LaunchAgents.", "hygiene": "Audit launch agents regularly using tools like KnockKnock."},
+    {"id": "t015", "text": "SSH login attempt or remote access request from unknown IP address", "category": "unauthorized_access", "severity": "HIGH", "action": "Block the IP and disable SSH if not actively needed.", "hygiene": "Disable SSH when not in use. Use key-based auth, not passwords."},
+    {"id": "t016", "text": "System update check from apple.com or software update service", "category": "safe", "severity": "LOW", "action": "No action needed. This is normal system behaviour.", "hygiene": "Keep system updates enabled for automatic security patches."},
+    {"id": "t017", "text": "iCloud backup or sync operation running in background", "category": "safe", "severity": "LOW", "action": "No action needed.", "hygiene": "Regular backups protect against data loss and ransomware."},
+    {"id": "t018", "text": "Known application accessed its own data directory or app support folder", "category": "safe", "severity": "LOW", "action": "No action needed. Normal app behaviour.", "hygiene": "Keep apps updated to their latest versions."},
+]
+
+KB_PATH = "threat_db/kb.json"
+EMBEDDINGS_PATH = "threat_db/embeddings.npy"
+
+def build_kb():
+    os.makedirs("threat_db", exist_ok=True)
+    print("Building threat knowledge base...")
+    texts = [p["text"] for p in THREAT_PATTERNS]
+    embeddings = model.encode(texts, show_progress_bar=True)
+    np.save(EMBEDDINGS_PATH, embeddings)
+    with open(KB_PATH, "w") as f:
+        json.dump(THREAT_PATTERNS, f)
+    print(f"✅ KB ready — {len(THREAT_PATTERNS)} patterns embedded")
+
+def load_kb():
+    if not os.path.exists(KB_PATH) or not os.path.exists(EMBEDDINGS_PATH):
+        build_kb()
+    with open(KB_PATH) as f:
+        patterns = json.load(f)
+    embeddings = np.load(EMBEDDINGS_PATH)
+    return patterns, embeddings
+
+def query_threat_kb(event_text, n_results=3):
+    patterns, embeddings = load_kb()
+    query_vec = model.encode([event_text])
+    
+    # Cosine similarity
+    norms = np.linalg.norm(embeddings, axis=1, keepdims=True)
+    query_norm = np.linalg.norm(query_vec)
+    similarities = (embeddings @ query_vec.T).flatten() / (norms.flatten() * query_norm + 1e-8)
+    
+    top_indices = similarities.argsort()[::-1][:n_results]
+    
+    matches = []
+    for i in top_indices:
+        matches.append({
+            "pattern": patterns[i]["text"],
+            "category": patterns[i]["category"],
+            "severity": patterns[i]["severity"],
+            "action": patterns[i]["action"],
+            "hygiene": patterns[i]["hygiene"],
+            "similarity": float(similarities[i])
+        })
+    return matches
+
+# Build on first import if needed
+if not os.path.exists(KB_PATH):
+    build_kb()
