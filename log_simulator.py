@@ -24,7 +24,12 @@ WHITELIST = [
     "com.apple.webkit", "com.apple.appkit", "com.apple.foundation",
     "chronod", "dasd", "mds", "mdworker", "com.apple.spotlight",
     "coreauthd", "com.apple.authkit", "com.apple.systempreferences",
-    "com.apple.dock", "com.apple.finder", "com.apple.mail",
+    "com.apple.dock", "com.apple.finder", "com.apple.mail","com.apple.bird",
+    "XProtectBridge",
+    "xprotect",
+    "com.apple.AssetCache",
+    "cloudd",
+    "com.apple.mmcs",
 ]
 
 def is_whitelisted(line):
