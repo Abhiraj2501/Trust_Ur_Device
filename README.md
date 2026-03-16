@@ -61,7 +61,8 @@ This is a RAG (Retrieval-Augmented Generation) pipeline — the LLM doesn't reas
 | Static analysis | pefile |
 | Dashboard | Streamlit |
 | GPU acceleration | AMD ROCm |
-
+# Required on macOS due to OpenMP conflict between PyTorch and sentence-transformers
+export KMP_DUPLICATE_LIB_OK=TRUE
 ---
 
 ## Performance
